@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+  <elmah>
+    <security allowRemoteAccess="yes" />
+    <errorLog type="WebRole1.TableErrorLog, WebRole1" connectionString="UseDevelopmentStorage=true" />
+    <!--<errorLog type="$rootnamespace$.TableErrorLog, $rootnamespace$"
+              connectionString="DefaultEndpointsProtocol=https;AccountName=YOURSTORAGEACCOUNT;AccountKey=YOURSTORAGEKEY" />-->
+  </elmah>
+
+</configuration>

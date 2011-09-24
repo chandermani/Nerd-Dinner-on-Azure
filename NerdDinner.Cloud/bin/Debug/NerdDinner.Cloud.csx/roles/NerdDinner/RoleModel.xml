@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RoleModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NerdDinner" version="1.5.20830.1814" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <Startup>
+    <Task commandLine="DiagnosticsAgent.exe" taskType="background" relativePath="plugins\Diagnostics">
+      <Environment>
+        <Variable name="RdModuleName" value="Diagnostics" />
+        <Variable name="WaRoleType" value="IISWebRole" />
+      </Environment>
+    </Task>
+    <Task commandLine="DiagnosticsAgent.exe /blockStartup" relativePath="plugins\Diagnostics">
+      <Environment>
+        <Variable name="RdModuleName" value="Diagnostics" />
+        <Variable name="WaRoleType" value="IISWebRole" />
+      </Environment>
+    </Task>
+  </Startup>
+  <Runtime>
+    <EntryPoint>
+      <NetFxEntryPoint assemblyName="NerdDinner.dll" />
+    </EntryPoint>
+  </Runtime>
+  <ConfigurationSettings>
+    <Setting name="ConnectionString" nameSpace="Microsoft.WindowsAzure.Plugins.Diagnostics" />
+  </ConfigurationSettings>
+  <Properties>
+    <Property name="RoleType" value="Web" />
+    <Property name="RoleName" value="NerdDinner" />
+    <Property name="ProjectName" value="NerdDinner" />
+    <Property name="Configuration" value="Debug" />
+    <Property name="Platform" value="AnyCPU" />
+    <Property name="OutputDir" value="J:\AzureDojo\Work\Final\NerdDinner.Cloud\obj\Debug\NerdDinner\" />
+    <Property name="EntryPoint" value="NerdDinner.dll" />
+    <Property name="SourceDir" value="J:\AzureDojo\Work\Final\NerdDinner\" />
+    <Property name="RoleTargetFramework" value="v4.0" />
+    <Property name="SitePhysicalPath" value="J:\AzureDojo\Work\Final\NerdDinner\" />
+    <Property name="OriginalItemSpec" value="J:\AzureDojo\Work\Final\NerdDinner.Cloud\NerdDinner.Cloud.ccproj" />
+    <Property name="MSBuildSourceProjectFile" value="J:\AzureDojo\Work\Final\NerdDinner.Cloud\NerdDinner.Cloud.ccproj" />
+    <Property name="MSBuildSourceTargetName" value="ResolveSingleWebRoleReference" />
+    <Property name="TargetFrameworkVersion" value="v4.0" />
+    <Property name="TargetRuntimeVersion" value="v4.0" />
+  </Properties>
+  <Sites>
+    <Site name="Web" physicalDirectory="J:\AzureDojo\Work\Final\NerdDinner\">
+      <Bindings>
+        <Binding name="Endpoint1" endpointName="Endpoint1" />
+      </Bindings>
+    </Site>
+  </Sites>
+</RoleModel>

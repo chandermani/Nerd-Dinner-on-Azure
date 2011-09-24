@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="NerdDinner">
+</Property><Property Name="Solution File" Value="J:\AzureDojo\Work\Final\NerdDinner.sln">
+</Property><Property Name="Date" Value="Wednesday, September 14, 2011">
+</Property><Property Name="Time" Value="21:55 PM">
+</Property></Properties><Event ErrorLevel="0" Project="NerdDinner" Source="NerdDinner\NerdDinner.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="NerdDinner" Source="NerdDinner\NerdDinner.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="NerdDinner.Tests" Source="NerdDinner.Tests\NerdDinner.Tests.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="NerdDinner.Tests" Source="NerdDinner.Tests\NerdDinner.Tests.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="J:\AzureDojo\Work\Final\NerdDinner.Cloud\NerdDinner.Cloud.ccproj" Source="NerdDinner.Cloud\NerdDinner.Cloud.ccproj" Description="Upgraded ProductVersion value to 1.5.0.">
+</Event><Event ErrorLevel="0" Project="J:\AzureDojo\Work\Final\NerdDinner.Cloud\NerdDinner.Cloud.ccproj" Source="NerdDinner.Cloud\NerdDinner.Cloud.ccproj" Description="Upgrade CloudExtensionsDir value to $(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\1.5\.">
+</Event><Event ErrorLevel="0" Project="" Source="NerdDinner.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="NerdDinner.sln" Description="No Conversion Required">
+</Event></UpgradeLog>
