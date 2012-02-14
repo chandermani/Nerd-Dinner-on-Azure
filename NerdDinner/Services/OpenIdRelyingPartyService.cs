@@ -66,7 +66,10 @@
 				throw new ArgumentNullException("returnTo");
 			}
 
-			if (!RoleEnvironment.IsAvailable)
+#if AZURE
+            throw new NotSupportedException("Azure platform not suported");
+#else
+
 			{
 				var requests = relyingParty.CreateRequests(userSuppliedIdentifier, realm, returnTo);
 
@@ -84,8 +87,9 @@
 
 					yield return request;
 				}
-			}
-		}
+            }
+#endif
+        }
 
 		public ActionResult AjaxDiscovery(Identifier userSuppliedIdentifier, Realm realm, Uri returnTo, Uri privacyPolicy) {
 			return relyingParty.AsAjaxDiscoveryResult(

@@ -21,9 +21,13 @@ namespace NerdDinner.Helpers
             {
                 if (string.IsNullOrWhiteSpace(_connectionString))
                 {
-                    _connectionString = (RoleEnvironment.IsAvailable) 
-                        ? RoleEnvironment.GetConfigurationSettingValue(_cloudConnectionString)
-                        : ConfigurationManager.ConnectionStrings[_localConnectionString].ConnectionString;
+#if AZURE
+
+                    _connectionString = RoleEnvironment.GetConfigurationSettingValue(_cloudConnectionString);
+
+#else
+                    _connectionString = ConfigurationManager.ConnectionStrings[_localConnectionString].ConnectionString;
+#endif
                 }
                 return _connectionString;
             }

@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Azure|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>AZURE</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DDay.iCal">
       <HintPath>lib\DDay.iCal.dll</HintPath>
@@ -373,6 +377,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties CloudId="07c1c0f0-b979-4040-bc52-1da8a50d827b" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
